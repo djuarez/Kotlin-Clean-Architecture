@@ -19,6 +19,12 @@ class GithubListUseCase @Inject
     }
 
     override fun buildUseCaseObservable(): Observable<List<Github>> {
+        var someexamplevariable: Github? = Github()
+        someexamplevariable!!.id
+        if (someexamplevariable != null) {
+
+        }
+        var cast = someexamplevariable as UseCase<*>
         return this.githubRepository.githubList(page, perPage)
     }
 }
